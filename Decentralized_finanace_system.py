@@ -110,7 +110,7 @@ def send_transaction(current_user):
         'value': w3.to_wei(data['amount'], 'ether'),
         'gas': 21000,
         'gasPrice': w3.eth.gas_price,
-        'chainId': 1 # Mainnet, change for testnets
+        'chainId': 11155111  # Sepolia testnet
     }
 
     # Sign and send
@@ -139,4 +139,5 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
+
 
