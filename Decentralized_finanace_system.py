@@ -130,7 +130,7 @@ def lend_assets(current_user):
     # Mock lending logic for DeFi dashboard
     data = request.get_json()
     return jsonify({
-        'message': f\"Successfully lent {data['amount']} {data['asset']} to the pool\",
+        'message': f"Successfully lent {data['amount']} {data['asset']} to the pool",
         'apy': '5.4%',
         'estimated_rewards': '0.002 ETH/month'
     })
@@ -139,7 +139,3 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
-
-
-
-
